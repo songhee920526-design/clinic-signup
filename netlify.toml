@@ -1,0 +1,8 @@
+# 금요일 클리닉 신청 사이트 (학원 운영 툴과 완전히 별개의 사이트)
+[build]
+  publish = "public"
+  command = "npm install"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"

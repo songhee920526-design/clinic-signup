@@ -1,0 +1,6 @@
+{
+  "name": "clinic-signup",
+  "private": true,
+  "description": "금요일 클리닉 신청 - Netlify 배포용 (정적 페이지 + Netlify Functions/Blobs)",
+  "dependencies": { "@netlify/blobs": "^11.1.0" }
+}

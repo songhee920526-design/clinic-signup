@@ -1,0 +1,55 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f4f6fb; color: #23283a; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Malgun Gothic", sans-serif; font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 440px; margin: 0 auto; padding: 16px; }
+.card { background: #fff; border: 1px solid #e3e7f1; border-radius: 14px; padding: 18px; margin-bottom: 14px; }
+.brand { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #6b738a; margin-bottom: 2px; }
+.brand img { height: 22px; width: auto; }
+h1 { font-size: 21px; margin: 2px 0 12px; font-weight: 600; }
+.box { background: #f4f6fb; border-radius: 10px; padding: 12px 14px; margin-bottom: 14px; }
+.box .big { font-size: 16px; margin: 0; }
+.muted { color: #6b738a; font-size: 13px; margin: 2px 0 0; }
+.barrow { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+.bar { flex: 1; height: 9px; background: #dfe4f0; border-radius: 5px; overflow: hidden; }
+.bar > i { display: block; height: 100%; background: #6d9bf0; }
+.bar.full > i { background: #ef9a9a; }
+.cnt { font-size: 15px; font-weight: 600; white-space: nowrap; }
+label { display: block; font-size: 13px; color: #6b738a; margin: 0 0 4px; }
+input[type=text], input[type=password], select { width: 100%; height: 44px; border: 1px solid #cfd6e6; border-radius: 10px; padding: 0 12px; font-size: 16px; font-family: inherit; background: #fff; color: inherit; }
+input:focus, select:focus { outline: 2px solid #b9d0fb; border-color: #6d9bf0; }
+.times { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 6px 0 16px; }
+button { font-family: inherit; font-size: 15px; cursor: pointer; border: 1px solid #cfd6e6; background: #fff; color: #23283a; border-radius: 10px; height: 44px; padding: 0 14px; }
+button:active { transform: scale(0.98); }
+.times button.on { background: #e6efff; border-color: #6d9bf0; color: #1f4ba5; font-weight: 600; }
+button.primary { width: 100%; height: 48px; background: #4a7fe0; border-color: #4a7fe0; color: #fff; font-weight: 600; font-size: 16px; }
+button.small { height: 34px; font-size: 13px; padding: 0 10px; }
+button.wide { width: 100%; }
+button.danger { color: #b3261e; }
+.msg { font-size: 14px; margin: 10px 0 0; min-height: 22px; }
+.msg.ok { color: #1f7a45; } .msg.err { color: #b3261e; } .msg.info { color: #6b738a; }
+.banner { border-radius: 10px; padding: 12px 14px; margin-bottom: 14px; font-size: 15px; }
+.banner.off { background: #fff3e0; color: #8a5200; }
+.banner.closed { background: #fdeaea; color: #8f2a2a; }
+.divider { border-top: 1px solid #e3e7f1; margin: 14px 0 12px; }
+.hidden { display: none !important; }
+.stepper { display: flex; align-items: center; justify-content: space-between; }
+.stepper .ctl { display: flex; align-items: center; gap: 12px; }
+.stepper .ctl button { width: 44px; font-size: 20px; padding: 0; }
+.stepper .num { font-size: 24px; font-weight: 600; min-width: 30px; text-align: center; }
+.weeknav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.weeknav button { width: 44px; padding: 0; font-size: 18px; }
+.weeknav .lbl { text-align: center; font-weight: 600; }
+.weeknav .lbl small { display: block; font-weight: 400; font-size: 12px; color: #6b738a; }
+.list { border: 1px solid #e3e7f1; border-radius: 10px; overflow: hidden; }
+.list .row { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-top: 1px solid #e3e7f1; }
+.list .row:first-child { border-top: 0; }
+.list .t { font-weight: 600; width: 44px; }
+.list .n { flex: 1; word-break: break-all; }
+.list .empty { padding: 14px; color: #6b738a; font-size: 14px; }
+.addrow { display: flex; gap: 8px; margin-top: 12px; }
+.addrow input { flex: 1; min-width: 0; } .addrow select { width: 90px; }
+.badge { font-size: 12px; background: #e6f4ea; color: #1f7a45; padding: 3px 10px; border-radius: 8px; }
+.top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.top h1 { margin: 0; }
+details summary { cursor: pointer; font-size: 14px; color: #6b738a; }
+.chk { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #6b738a; margin: 10px 0 0; }
+.chk input { width: 18px; height: 18px; }

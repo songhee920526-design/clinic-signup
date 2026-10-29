@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>클리닉 관리</title>
+<link rel="stylesheet" href="clinic.css?v=1">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="card hidden" id="setupCard">
+    <h1>처음 한 번, PIN 정하기</h1>
+    <p class="muted" style="margin-bottom:12px">이 화면은 PIN을 아는 원장님만 열 수 있어요. 4자 이상으로 정해 주세요. 숫자 6자리를 추천해요.</p>
+    <label for="sp1">새 PIN</label>
+    <input id="sp1" type="password" autocomplete="new-password">
+    <div style="height:10px"></div>
+    <label for="sp2">새 PIN 한 번 더</label>
+    <input id="sp2" type="password" autocomplete="new-password">
+    <div style="height:14px"></div>
+    <button class="primary" id="spGo" type="button">PIN 정하기</button>
+    <p class="msg" id="spMsg"></p>
+  </div>
+
+  <div class="card hidden" id="loginCard">
+    <h1>클리닉 관리</h1>
+    <label for="lp">PIN</label>
+    <input id="lp" type="password" autocomplete="current-password">
+    <label class="chk"><input id="remember" type="checkbox" checked> 이 기기에서 PIN 기억하기</label>
+    <div style="height:14px"></div>
+    <button class="primary" id="lpGo" type="button">열기</button>
+    <p class="msg" id="lpMsg"></p>
+  </div>
+
+  <div id="main" class="hidden">
+    <div class="top">
+      <h1>클리닉 관리</h1>
+      <button class="small" id="logout" type="button">나가기</button>
+    </div>
+
+    <div class="card">
+      <div class="weeknav">
+        <button id="prev" type="button" aria-label="이전 주">‹</button>
+        <div class="lbl"><span id="wLabel"></span><small id="wSub"></small></div>
+        <button id="next" type="button" aria-label="다음 주">›</button>
+      </div>
+
+      <div class="box">
+        <div class="stepper">
+          <span>정원</span>
+          <div class="ctl">
+            <button id="capMinus" type="button" aria-label="정원 줄이기">−</button>
+            <span class="num" id="capNum"></span>
+            <button id="capPlus" type="button" aria-label="정원 늘리기">+</button>
+          </div>
+        </div>
+        <p class="muted" id="stat"></p>
+        <p class="muted" id="capNote"></p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+        <button id="closeBtn" type="button"></button>
+        <button id="offBtn" type="button"></button>
+      </div>
+      <div id="offBox" class="hidden" style="margin-top:10px">
+        <label for="reason">학생에게 보이는 사유 (비워도 돼요)</label>
+        <div class="addrow" style="margin-top:0">
+          <input id="reason" type="text" maxlength="60" placeholder="시험 기간이라 쉬어요">
+          <button id="reasonSave" type="button" class="small" style="height:44px">저장</button>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <label>신청 명단 (등원 시간순)</label>
+      <div class="list" id="list"></div>
+      <div class="addrow">
+        <input id="an" type="text" maxlength="20" placeholder="이름 직접 추가">
+        <select id="at" aria-label="시간"></select>
+        <button id="ab" type="button" class="small" style="height:44px">추가</button>
+      </div>
+      <p class="msg" id="msg" role="status"></p>
+    </div>
+
+    <div class="card">
+      <label id="prevLabel"></label>
+      <p id="prevText" style="margin:0;font-size:15px"></p>
+      <p class="muted">지난 명단은 기록으로 남아 있어요</p>
+    </div>
+
+    <div class="card">
+      <details>
+        <summary>PIN 바꾸기</summary>
+        <div style="margin-top:12px">
+          <label for="cp0">지금 PIN</label>
+          <input id="cp0" type="password" autocomplete="current-password">
+          <div style="height:10px"></div>
+          <label for="cp1">새 PIN</label>
+          <input id="cp1" type="password" autocomplete="new-password">
+          <div style="height:14px"></div>
+          <button class="wide" id="cpGo" type="button">PIN 바꾸기</button>
+          <p class="msg" id="cpMsg"></p>
+        </div>
+      </details>
+    </div>
+  </div>
+</div>
+<script src="admin.js?v=1"></script>
+</body>
+</html>

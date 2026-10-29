@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>금요일 클리닉 신청</title>
+<link rel="stylesheet" href="clinic.css?v=1">
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="brand"><img src="assets/logo-yuri.png" alt=""><span>유리한 수 수학교습소</span></div>
+    <h1>금요일 클리닉 신청</h1>
+    <div class="box">
+      <p class="big" id="dateLine">불러오는 중…</p>
+      <p class="muted" id="deadline"></p>
+      <div class="barrow" id="barRow">
+        <div class="bar" id="barBox"><i id="bar" style="width:0%"></i></div>
+        <span class="cnt" id="cnt"></span>
+      </div>
+    </div>
+    <div id="banner" class="banner hidden"></div>
+    <div id="formArea">
+      <label for="nm">이름</label>
+      <input id="nm" type="text" maxlength="20" placeholder="홍길동" autocomplete="off">
+      <div style="height:14px"></div>
+      <label>희망 등원 시간</label>
+      <div class="times" id="times"></div>
+      <button class="primary" id="go" type="button">신청하기</button>
+      <p class="msg" id="msg" role="status"></p>
+      <div class="divider"></div>
+      <p class="muted" style="margin:0 0 8px">이미 신청했다면 같은 이름으로 다시 신청하면 시간이 바뀌어요</p>
+      <button class="wide" id="cancel" type="button" style="height:40px;font-size:14px">신청 취소하기</button>
+    </div>
+  </div>
+</div>
+<script src="app.js?v=1"></script>
+</body>
+</html>

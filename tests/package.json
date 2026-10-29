@@ -1,0 +1,7 @@
+{
+  "name": "clinic-signup-tests",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "TZ=Asia/Seoul node --test --test-force-exit *.test.mjs" },
+  "dependencies": { "@netlify/blobs": "^11.1.0", "jsdom": "^24.0.0" }
+}
